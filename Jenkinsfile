@@ -16,7 +16,7 @@ stage('Run Docker Container') {
                 sh '''
                 docker stop flask-api || true
                 docker rm flask-api || true
-                docker run -d -p 5001:5001 --name flask-api flask-api
+                docker run -d -p 8000:8000 --name flask-api flask-api
                 '''
             }
         }
